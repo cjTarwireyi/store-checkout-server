@@ -23,9 +23,6 @@ const stripe = require("stripe")("sk_test_51NXLNCAQcbnrGaFbeQY9fzxEOpVFAo0jurtVf
                     unit_amount:item.price * 100
                 } ,
                 quantity: item.quantity,
-                // name: item.name,          
-                // price: '{{PRICE_ID}}',
-                // quantity: 1,
               })),
             mode:"payment",
             success_url:"https://store-checkout.onrender.com/success.html",
@@ -33,7 +30,6 @@ const stripe = require("stripe")("sk_test_51NXLNCAQcbnrGaFbeQY9fzxEOpVFAo0jurtVf
         })
         console.log(session.id)
         res.status(200).json(session.id);
-       // res.redirect(303, session.url);
     } catch(error){
         next(error)
     }
