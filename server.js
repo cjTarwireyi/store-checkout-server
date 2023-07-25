@@ -28,8 +28,8 @@ const stripe = require("stripe")("sk_test_51NXLNCAQcbnrGaFbeQY9fzxEOpVFAo0jurtVf
                 // quantity: 1,
               })),
             mode:"payment",
-            success_url:"http://localhost:4242/success.html",
-            cancel_url:"http://localhost:4242/cancel.html"
+            success_url:"https://store-checkout.onrender.com:4242/success.html",
+            cancel_url:"https://store-checkout.onrender.com:4242/cancel.html"
         })
         console.log(session.id)
         res.status(200).json(session.id);
