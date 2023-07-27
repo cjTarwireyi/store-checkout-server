@@ -50,11 +50,5 @@ app.get("/products", async(req,res, next)=>{
       res.status(200).json(prices);
 })
 
-// const price = await stripe.prices.create({
-//     unit_amount: 2000,
-//     currency: 'usd',
-//     recurring: {interval: 'month'},
-//     product: 'prod_OK0FICQZGMnj9t',
-//   });
 const PORT = process.env.PORT || 4242;
  app.listen(PORT,() => console.log("app is running on 4242"));
